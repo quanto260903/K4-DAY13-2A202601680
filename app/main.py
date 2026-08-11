@@ -51,7 +51,6 @@ async def chat(request: Request, body: ChatRequest) -> ChatResponse:
         model=agent.model,
         env=os.getenv("APP_ENV", "dev"),
     )
-
     log.info(
         "request_received",
         service="api",

@@ -15,7 +15,6 @@ class CorrelationIdMiddleware(BaseHTTPMiddleware):
         correlation_id = request.headers.get("x-request-id") or f"req-{uuid.uuid4().hex[:8]}"
 
         bind_contextvars(correlation_id=correlation_id)
-
         request.state.correlation_id = correlation_id
 
         start = time.perf_counter()
