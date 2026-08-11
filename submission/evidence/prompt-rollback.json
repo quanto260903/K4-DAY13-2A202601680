@@ -1,0 +1,17 @@
+{
+  "prompt_name": "day13-chat",
+  "labels": {
+    "baseline": {
+      "version": 1,
+      "is_fallback": false
+    },
+    "candidate": {
+      "version": 2,
+      "is_fallback": false
+    },
+    "production": {
+      "version": 1,
+      "is_fallback": false
+    }
+  }
+}

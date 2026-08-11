@@ -1,0 +1,109 @@
+{
+  "captured_at": "2026-08-11T08:52:57.195730+00:00",
+  "mode": "practice",
+  "challenge_id": "practice",
+  "scenario": "rag_slow",
+  "threshold_ms": 2000,
+  "metrics_before": {
+    "traffic": 0,
+    "latency_p50": 0.0,
+    "latency_p95": 0.0,
+    "latency_p99": 0.0,
+    "error_rate_pct": 0.0,
+    "avg_cost_usd": 0.0,
+    "total_cost_usd": 0,
+    "tokens_in_total": 0,
+    "tokens_out_total": 0,
+    "error_breakdown": {},
+    "quality_avg": 0.0
+  },
+  "metrics_after": {
+    "traffic": 10,
+    "latency_p50": 2652.0,
+    "latency_p95": 3601.0,
+    "latency_p99": 3601.0,
+    "error_rate_pct": 0.0,
+    "avg_cost_usd": 0.002,
+    "total_cost_usd": 0.0204,
+    "tokens_in_total": 330,
+    "tokens_out_total": 1296,
+    "error_breakdown": {},
+    "quality_avg": 0.88
+  },
+  "requests": [
+    {
+      "status_code": 200,
+      "correlation_id": "req-e3ccfa7b",
+      "latency_ms": 3601,
+      "feature": "qa",
+      "session_id": "s01"
+    },
+    {
+      "status_code": 200,
+      "correlation_id": "req-36fd1a71",
+      "latency_ms": 2652,
+      "feature": "qa",
+      "session_id": "s02"
+    },
+    {
+      "status_code": 200,
+      "correlation_id": "req-b381d958",
+      "latency_ms": 2657,
+      "feature": "summary",
+      "session_id": "s03"
+    },
+    {
+      "status_code": 200,
+      "correlation_id": "req-eac5b714",
+      "latency_ms": 2652,
+      "feature": "qa",
+      "session_id": "s04"
+    },
+    {
+      "status_code": 200,
+      "correlation_id": "req-7c14e088",
+      "latency_ms": 2652,
+      "feature": "qa",
+      "session_id": "s05"
+    },
+    {
+      "status_code": 200,
+      "correlation_id": "req-20bd150c",
+      "latency_ms": 2653,
+      "feature": "summary",
+      "session_id": "s06"
+    },
+    {
+      "status_code": 200,
+      "correlation_id": "req-767cd081",
+      "latency_ms": 2652,
+      "feature": "qa",
+      "session_id": "s07"
+    },
+    {
+      "status_code": 200,
+      "correlation_id": "req-88510b9f",
+      "latency_ms": 2652,
+      "feature": "qa",
+      "session_id": "s08"
+    },
+    {
+      "status_code": 200,
+      "correlation_id": "req-092eb72b",
+      "latency_ms": 2652,
+      "feature": "qa",
+      "session_id": "s09"
+    },
+    {
+      "status_code": 200,
+      "correlation_id": "req-eae229a8",
+      "latency_ms": 2653,
+      "feature": "qa",
+      "session_id": "s10"
+    }
+  ],
+  "slow_request_count": 10,
+  "root_cause": "The rag_slow incident adds 2.5 seconds inside the retrieve span.",
+  "fix_action": "Disable rag_slow and restore the normal retrieval path.",
+  "preventive_measure": "Alert on tail latency and retrieval-span duration, with timeout and fallback controls."
+}

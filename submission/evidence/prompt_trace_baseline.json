@@ -1,0 +1,278 @@
+{
+  "id": "5bdde65f1526cc8cde701ace7d187dbf",
+  "timestamp": "2026-08-11T08:46:49.145000Z",
+  "name": "run",
+  "metadata": {
+    "user_id": "4d14d5d4f719",
+    "session_id": "s09",
+    "tags": [
+      "lab",
+      "qa",
+      "claude-sonnet-4-5"
+    ],
+    "doc_count": 1,
+    "query_preview": "What is the policy for PII and credit card [REDACTED_CREDIT_CARD]?",
+    "prompt_name": "day13-chat",
+    "prompt_label": "baseline",
+    "prompt_version": 1,
+    "prompt_source": "langfuse",
+    "resourceAttributes": {
+      "telemetry.sdk.language": "python",
+      "telemetry.sdk.name": "opentelemetry",
+      "telemetry.sdk.version": "1.44.0",
+      "service.instance.id": "d0dff032-f515-426e-85ba-59bb560f2572",
+      "service.name": "unknown_service"
+    },
+    "scope": {
+      "name": "langfuse-sdk",
+      "version": "4.14.3",
+      "attributes": {}
+    }
+  },
+  "tags": [],
+  "public": false,
+  "environment": "default",
+  "htmlPath": "/project/cmsocvozj01p3ad0imvpretp3/traces/5bdde65f1526cc8cde701ace7d187dbf",
+  "latency": 0.508,
+  "totalCost": 0.002178,
+  "observations": [
+    {
+      "id": "0f9becfbaf5dc940",
+      "traceId": "5bdde65f1526cc8cde701ace7d187dbf",
+      "type": "GENERATION",
+      "name": "run",
+      "startTime": "2026-08-11T08:46:49.145000Z",
+      "endTime": "2026-08-11T08:46:49.653000Z",
+      "model": "claude-sonnet-4-5",
+      "modelParameters": {},
+      "metadata": {
+        "user_id": "4d14d5d4f719",
+        "session_id": "s09",
+        "tags": [
+          "lab",
+          "qa",
+          "claude-sonnet-4-5"
+        ],
+        "doc_count": 1,
+        "query_preview": "What is the policy for PII and credit card [REDACTED_CREDIT_CARD]?",
+        "prompt_name": "day13-chat",
+        "prompt_label": "baseline",
+        "prompt_version": 1,
+        "prompt_source": "langfuse",
+        "resourceAttributes": {
+          "telemetry.sdk.language": "python",
+          "telemetry.sdk.name": "opentelemetry",
+          "telemetry.sdk.version": "1.44.0",
+          "service.instance.id": "d0dff032-f515-426e-85ba-59bb560f2572",
+          "service.name": "unknown_service"
+        },
+        "scope": {
+          "name": "langfuse-sdk",
+          "version": "4.14.3",
+          "attributes": {}
+        }
+      },
+      "usage": {
+        "input": 0,
+        "output": 0,
+        "total": 174,
+        "unit": "TOKENS"
+      },
+      "level": "DEFAULT",
+      "promptId": "b8673c1e-8763-4013-b363-137f9a1bf5a5",
+      "usageDetails": {
+        "prompt_tokens": 36,
+        "completion_tokens": 138,
+        "total": 174
+      },
+      "costDetails": {
+        "total": 0.002178
+      },
+      "environment": "default",
+      "promptName": "day13-chat",
+      "promptVersion": 1,
+      "modelId": "c5qmrqolku82tra3vgdixmys",
+      "inputPrice": 3e-06,
+      "outputPrice": 1.5e-05,
+      "totalPrice": 0.0,
+      "calculatedTotalCost": 0.002178,
+      "latency": 0.508,
+      "projectId": "cmsocvozj01p3ad0imvpretp3",
+      "createdAt": "2026-08-11T08:46:50.679Z",
+      "updatedAt": "2026-08-11T08:46:50.689Z",
+      "usagePricingTierId": "c5qmrqolku82tra3vgdixmys_tier_default",
+      "usagePricingTierName": "Standard",
+      "unit": "TOKENS",
+      "promptTokens": 0,
+      "completionTokens": 0,
+      "totalTokens": 174,
+      "completionStartTime": null,
+      "input": null,
+      "version": null,
+      "output": null,
+      "statusMessage": null,
+      "parentObservationId": null,
+      "calculatedInputCost": null,
+      "calculatedOutputCost": null,
+      "timeToFirstToken": null
+    },
+    {
+      "id": "205ec035412a2ca0",
+      "traceId": "5bdde65f1526cc8cde701ace7d187dbf",
+      "type": "SPAN",
+      "name": "retrieve",
+      "startTime": "2026-08-11T08:46:49.145000Z",
+      "endTime": "2026-08-11T08:46:49.145000Z",
+      "input": {
+        "args": [
+          "What is the policy for PII and credit card [REDACTED_CREDIT_CARD]?"
+        ],
+        "kwargs": {}
+      },
+      "metadata": {
+        "resourceAttributes": {
+          "telemetry.sdk.language": "python",
+          "telemetry.sdk.name": "opentelemetry",
+          "telemetry.sdk.version": "1.44.0",
+          "service.instance.id": "d0dff032-f515-426e-85ba-59bb560f2572",
+          "service.name": "unknown_service"
+        },
+        "scope": {
+          "name": "langfuse-sdk",
+          "version": "4.14.3",
+          "attributes": {}
+        }
+      },
+      "output": [
+        "Do not expose PII in logs. Use sanitized summaries only."
+      ],
+      "usage": {
+        "input": 0,
+        "output": 0,
+        "total": 0,
+        "unit": "TOKENS"
+      },
+      "level": "DEFAULT",
+      "parentObservationId": "0f9becfbaf5dc940",
+      "usageDetails": {},
+      "costDetails": {},
+      "environment": "default",
+      "inputPrice": 0.0,
+      "outputPrice": 0.0,
+      "totalPrice": 0.0,
+      "calculatedTotalCost": 0.0,
+      "latency": 0.0,
+      "projectId": "cmsocvozj01p3ad0imvpretp3",
+      "createdAt": "2026-08-11T08:46:50.213Z",
+      "updatedAt": "2026-08-11T08:46:50.213Z",
+      "unit": "TOKENS",
+      "promptTokens": 0,
+      "completionTokens": 0,
+      "totalTokens": 0,
+      "completionStartTime": null,
+      "model": null,
+      "modelParameters": null,
+      "version": null,
+      "statusMessage": null,
+      "promptId": null,
+      "promptName": null,
+      "promptVersion": null,
+      "modelId": null,
+      "calculatedInputCost": null,
+      "calculatedOutputCost": null,
+      "timeToFirstToken": null,
+      "usagePricingTierId": null,
+      "usagePricingTierName": null
+    },
+    {
+      "id": "7bc219134427f981",
+      "traceId": "5bdde65f1526cc8cde701ace7d187dbf",
+      "type": "SPAN",
+      "name": "generate",
+      "startTime": "2026-08-11T08:46:49.146000Z",
+      "endTime": "2026-08-11T08:46:49.296000Z",
+      "input": {
+        "args": [
+          "Feature=qa\nDocs=Do not expose PII in logs. Use sanitized summaries only.\nQuestion=What is the policy for PII and credit card [REDACTED_CREDIT_CARD]?"
+        ],
+        "kwargs": {}
+      },
+      "metadata": {
+        "resourceAttributes": {
+          "telemetry.sdk.language": "python",
+          "telemetry.sdk.name": "opentelemetry",
+          "telemetry.sdk.version": "1.44.0",
+          "service.instance.id": "d0dff032-f515-426e-85ba-59bb560f2572",
+          "service.name": "unknown_service"
+        },
+        "scope": {
+          "name": "langfuse-sdk",
+          "version": "4.14.3",
+          "attributes": {}
+        }
+      },
+      "output": {
+        "text": "Starter answer. Teams should improve this output logic and add better quality checks. Use retrieved context and keep responses concise.",
+        "usage": {
+          "input_tokens": 36,
+          "output_tokens": 138
+        },
+        "model": "claude-sonnet-4-5"
+      },
+      "usage": {
+        "input": 0,
+        "output": 0,
+        "total": 0,
+        "unit": "TOKENS"
+      },
+      "level": "DEFAULT",
+      "parentObservationId": "0f9becfbaf5dc940",
+      "usageDetails": {},
+      "costDetails": {},
+      "environment": "default",
+      "inputPrice": 0.0,
+      "outputPrice": 0.0,
+      "totalPrice": 0.0,
+      "calculatedTotalCost": 0.0,
+      "latency": 0.15,
+      "projectId": "cmsocvozj01p3ad0imvpretp3",
+      "createdAt": "2026-08-11T08:46:50.213Z",
+      "updatedAt": "2026-08-11T08:46:50.213Z",
+      "unit": "TOKENS",
+      "promptTokens": 0,
+      "completionTokens": 0,
+      "totalTokens": 0,
+      "completionStartTime": null,
+      "model": null,
+      "modelParameters": null,
+      "version": null,
+      "statusMessage": null,
+      "promptId": null,
+      "promptName": null,
+      "promptVersion": null,
+      "modelId": null,
+      "calculatedInputCost": null,
+      "calculatedOutputCost": null,
+      "timeToFirstToken": null,
+      "usagePricingTierId": null,
+      "usagePricingTierName": null
+    }
+  ],
+  "scores": [],
+  "_deprecation": {
+    "message": "Langfuse v3 is deprecated; this endpoint will be removed in a future release. In Langfuse v4, read span and trace data via GET /api/public/v2/observations?fromStartTime=<from>&toStartTime=<to>.",
+    "replacement": "GET /api/public/v2/observations?fromStartTime=<from>&toStartTime=<to>",
+    "docsUrl": "https://langfuse.com/docs/api-and-data-platform/features/observations-api"
+  },
+  "projectId": "cmsocvozj01p3ad0imvpretp3",
+  "bookmarked": false,
+  "createdAt": "2026-08-11T08:46:51.000Z",
+  "updatedAt": "2026-08-11T08:46:50.789Z",
+  "input": null,
+  "output": null,
+  "sessionId": null,
+  "release": null,
+  "version": null,
+  "userId": null,
+  "externalId": null
+}

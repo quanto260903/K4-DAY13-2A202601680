@@ -1,0 +1,74 @@
+{
+  "captured_at": "2026-08-11T08:53:18.591293+00:00",
+  "mode": "challenge",
+  "challenge_id": "day13-k4-observability-v1",
+  "scenario": "rag_slow",
+  "threshold_ms": 2000,
+  "metrics_before": {
+    "traffic": 0,
+    "latency_p50": 0.0,
+    "latency_p95": 0.0,
+    "latency_p99": 0.0,
+    "error_rate_pct": 0.0,
+    "avg_cost_usd": 0.0,
+    "total_cost_usd": 0,
+    "tokens_in_total": 0,
+    "tokens_out_total": 0,
+    "error_breakdown": {},
+    "quality_avg": 0.0
+  },
+  "metrics_after": {
+    "traffic": 5,
+    "latency_p50": 2653.0,
+    "latency_p95": 3632.0,
+    "latency_p99": 3632.0,
+    "error_rate_pct": 0.0,
+    "avg_cost_usd": 0.0021,
+    "total_cost_usd": 0.0103,
+    "tokens_in_total": 175,
+    "tokens_out_total": 650,
+    "error_breakdown": {},
+    "quality_avg": 0.84
+  },
+  "requests": [
+    {
+      "status_code": 200,
+      "correlation_id": "req-900764f6",
+      "latency_ms": 3632,
+      "feature": "monitoring",
+      "session_id": "k4-challenge-s02"
+    },
+    {
+      "status_code": 200,
+      "correlation_id": "req-00bf8870",
+      "latency_ms": 2652,
+      "feature": "monitoring",
+      "session_id": "k4-challenge-s01"
+    },
+    {
+      "status_code": 200,
+      "correlation_id": "req-98f14004",
+      "latency_ms": 2652,
+      "feature": "monitoring",
+      "session_id": "k4-challenge-s05"
+    },
+    {
+      "status_code": 200,
+      "correlation_id": "req-4a86b467",
+      "latency_ms": 2653,
+      "feature": "monitoring",
+      "session_id": "k4-challenge-s03"
+    },
+    {
+      "status_code": 200,
+      "correlation_id": "req-f92ec30e",
+      "latency_ms": 2653,
+      "feature": "monitoring",
+      "session_id": "k4-challenge-s04"
+    }
+  ],
+  "slow_request_count": 5,
+  "root_cause": "The rag_slow incident adds 2.5 seconds inside the retrieve span.",
+  "fix_action": "Disable rag_slow and restore the normal retrieval path.",
+  "preventive_measure": "Alert on tail latency and retrieval-span duration, with timeout and fallback controls."
+}
