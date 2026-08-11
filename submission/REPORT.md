@@ -4,15 +4,15 @@
 
 - Tên nhóm: K4-G27
 - Repository URL: https://github.com/quanto260903/Day13-K4-G27
-- Commit SHA nền đã kiểm chứng: `3fff4750b2b47b8c606ccef4686f420551d0bfea`
+- Commit SHA cuối:
 - Thành viên và vai trò:
-  - `HungBil`: khởi tạo hệ thống, challenge config, dashboard/prompt workflow nền.
-  - `quanto260903`: Checkpoint 1 — correlation ID, log enrichment và PII redaction.
-  - `saihonganh-prog`: Checkpoint 2/3 — tracing, dashboard/SLO/alert, load test, incident và tổng hợp báo cáo.
+  - `2A202601680 - Tô Minh Quân`: Nhóm trưởng; Thành viên A (Tech Lead/Backend Engineer); phụ trách CP1 - xây dựng middleware, gán correlation ID, enrichment logs.
+  - `2A202601018 - Sái Hồng Anh`: Thành viên B (SRE & Alerts Engineer); phụ trách CP2 - cấu hình Langfuse, thiết lập SLO/Alert Rules, viết tài liệu Alert Runbook.
+  - `2A202601852 - Lê Khả Chính`: Thành viên C (QA & Chief Investigator); thiết kế Dashboard Spec, thực hiện load test, quản lý Challenge/Practice Incident CP3 và tổng hợp báo cáo nhóm.
 
 ## 2. Kết quả kỹ thuật
 
-- Điểm `validate_logs.py`: **100/100** trên 84 log records; 0 thiếu required fields, 0 thiếu enrichment, 41 correlation IDs duy nhất.
+- Điểm `validate_logs.py`: **100/100** trên 128 log records; 0 thiếu required fields, 0 thiếu enrichment, 60 correlation IDs duy nhất.
 - Tổng số traces export gần nhất: **50 trace `run`**, gồm traces baseline, candidate, production, practice và challenge.
 - Số PII leak còn lại: **0**.
 - Dashboard runtime: [`evidence/dashboard.html`](evidence/dashboard.html).
@@ -77,9 +77,9 @@
 
 | Thành viên | Phần việc | Commit/đầu ra | Điều đã học |
 |---|---|---|---|
-| `HungBil` | Khung lab, challenge, dashboard/prompt workflow nền | `b95464c`, `4013676`, `aff4f19`, `5ba6472` | Thiết kế observability contract và challenge có thể tái lập |
-| `quanto260903` | Correlation ID, metadata và PII | `21249bb` | Context propagation và scrub dữ liệu trước khi ghi log |
-| `saihonganh-prog` | Tracing, dashboard/SLO/alerts, load test, incident và report | `3fff475` và các file evidence hiện tại | Điều tra theo chuỗi Metrics → Traces → Logs và quản lý prompt rollback |
+| `2A202601680 - Tô Minh Quân` | Nhóm trưởng; Tech Lead/Backend Engineer; CP1: middleware, correlation ID, log enrichment | CP1 implementation and validated logging output | Context propagation, structured JSON logging, and safe request metadata enrichment |
+| `2A202601018 - Sái Hồng Anh` | SRE & Alerts Engineer; CP2: Langfuse configuration, SLO/Alert Rules, Alert Runbook | Block 2 observability config, SLO, alert rules, runbook | Symptom-based alerting and the Metrics → Traces → Logs workflow |
+| `2A202601852 - Lê Khả Chính` | QA & Chief Investigator; Dashboard Spec, load test, Challenge/Practice Incident CP3, report tổng hợp | Dashboard spec, load-test evidence, incident evidence, final report | Incident investigation, evidence collection, and demo narrative |
 
 ## 8. Kịch bản demo ngắn
 
